@@ -1,0 +1,5 @@
+id,author,source,final_score,weighted_sum,filter_reason,text
+ex-p1,sim_racer,thunder,0.080000,0.079000,,EXAMPLE DATA — pre-scored fictional row
+ex-p2,gaeltacht_dev,thunder,0.120000,0.119000,,EXAMPLE DATA — pre-scored fictional row
+ex-p3,old_thread,thunder,,,"age_filter",EXAMPLE DATA — already filtered fictional row
+ex-p4,track_notes,phoenix,0.040000,0.039000,,EXAMPLE DATA — pre-scored fictional row

@@ -1,0 +1,44 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "x-algo-export-counter"
+version = "0.1.0"
+description = "Count and export results from a batch of X-algorithm scores (toy, offline, cited public weights only)"
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Joshua Almeida" }]
+requires-python = ">=3.10"
+dependencies = [
+    "PyYAML>=6.0,<7",
+]
+keywords = ["x", "algorithm", "ranking", "export", "counter"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.12",
+]
+
+[project.urls]
+Repository = "https://github.com/fitzyracing1/x-algo-export-counter"
+"x-algo-scorer" = "https://github.com/fitzyracing1/x-algo-scorer"
+"xai-org/x-algorithm" = "https://github.com/xai-org/x-algorithm"
+
+[project.scripts]
+x-algo-export-counter = "x_algo_export_counter.cli:main"
+
+[project.optional-dependencies]
+dev = ["pytest>=7"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+x_algo_export_counter = ["data/x-algorithm.yml"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
